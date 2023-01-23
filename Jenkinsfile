@@ -41,7 +41,7 @@ pipeline {
      stage('Deploy Image') {
        steps{
 
-           withCredentials([usernamePassword(credentialsId: 'dockerhid', passwordVariable: 'dockeridPassword', usernameVariable: 'dockeridUser')]) {
+           withCredentials([usernamePassword(credentialsId: 'dockerid', passwordVariable: 'dockeridPassword', usernameVariable: 'dockeridUser')]) {
              sh "docker login -u ${env.dockeridUser} -p ${env.dockeridPassword}"
              sh 'docker push sharanyajayaram/trialpro:latest'
 //             sh "docker pull sharanyajayaram/bankdocker:latest"
