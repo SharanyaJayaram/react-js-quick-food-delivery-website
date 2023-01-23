@@ -3,7 +3,7 @@ pipeline {
      def sonarScanner = tool name: 'shasonar' , type: 'hudson.plugins.sonar.SonarRunnerInstallation'
 //     imagename = "sharanyajayaram/bankdocker"
 //     dockerImage = ''
-//   }
+   }
   agent any
   stages {
     stage('Code checkout') {
@@ -16,10 +16,10 @@ pipeline {
        withSonarQubeEnv(installationName: 'shasonar', credentialsId: 'sonarid', envOnly: true) {
 //         //withSonarQubeEnv(credentialsId: 'sonarid')  {
              sh "${sonarScanner}/bin/sonar-scanner -Dsonar.projectKey=develop -Dsonar.sources=. "
-//         }
+         }
         
-//     }
-// }
+     }
+ }
 //     stage('Testing'){
 //       steps{
 //         script{
