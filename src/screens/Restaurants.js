@@ -18,8 +18,7 @@ class Restaurants extends Component {
             defaultSearchValue: "",
             renderRestaurantList: true,
             renderCategorizedRestaurants: false,
-            eslint-disable-next-line
-            renderSearchRestaurants: false,
+            //renderSearchRestaurants: false,
         }
         this.handleCategoriesCheckbox = this.handleCategoriesCheckbox.bind(this);
         this.handleSearchBar = this.handleSearchBar.bind(this);
