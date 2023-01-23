@@ -18,7 +18,7 @@ class Restaurants extends Component {
             defaultSearchValue: "",
             renderRestaurantList: true,
             renderCategorizedRestaurants: false,
-            //renderSearchRestaurants: false,
+            renderSearchRestaurants: false,
         }
         this.handleCategoriesCheckbox = this.handleCategoriesCheckbox.bind(this);
         this.handleSearchBar = this.handleSearchBar.bind(this);
@@ -189,7 +189,7 @@ class Restaurants extends Component {
     }
 
     _renderSearchRestaurants() {
-        const { searchText, searchRestaurants } = this.state;
+       // eslint-disable-next-lineconst { searchText, searchRestaurants } = this.state;
         if (searchRestaurants) {
             return Object.keys(searchRestaurants).map((val) => {
                 return (
