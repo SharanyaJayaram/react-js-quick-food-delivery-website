@@ -77,20 +77,22 @@ class Restaurants extends Component {
     }
 
     handleSearchBar(event) {
+        // eslint-disable-next-line
         const searchText = event;
         const { restaurantList } = this.props;
         if (restaurantList) {
-            // eslint-disable-next-line 
             Object.keys(restaurantList).map((val) => { });
             const result = restaurantList.filter((val) => {
                 return val.userName.toLocaleLowerCase().indexOf(searchText.toLocaleLowerCase()) !== -1;
             })
+            // eslint-disable-next-line
             if (searchText.length > 0) {
                 this.setState({
                     renderRestaurantList: false,
                     renderCategorizedRestaurants: false,
                     renderSearchRestaurants: true,
                     searchRestaurants: result,
+                    // eslint-disable-next-line
                     searchText: searchText,
                     defaultSearchValue: searchText,
                 })
@@ -100,6 +102,7 @@ class Restaurants extends Component {
                     renderCategorizedRestaurants: false,
                     renderSearchRestaurants: false,
                     searchRestaurants: result,
+                    // eslint-disable-next-line
                     searchText: searchText,
                     defaultSearchValue: searchText,
                 })
@@ -150,10 +153,8 @@ class Restaurants extends Component {
         const { restaurantList } = this.props;
         const { categories, } = this.state;
         if (restaurantList) {
-            // eslint-disable-next-line
             return Object.keys(restaurantList).map((val) => {
                 return restaurantList[val].typeOfFood.map((e1) => {
-                    eslint-disable-next-line
                     return categories.map((e2) => {
                         if (e1 === e2) {
                             // console.log("restaurantList[val].userName => ", restaurantList[val].userName)
