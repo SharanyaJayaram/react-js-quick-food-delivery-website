@@ -80,7 +80,7 @@ class Restaurants extends Component {
         const searchText = event;
         const { restaurantList } = this.props;
         if (restaurantList) {
-            eslint-disable-next-line 
+            // eslint-disable-next-line 
             Object.keys(restaurantList).map((val) => { });
             const result = restaurantList.filter((val) => {
                 return val.userName.toLocaleLowerCase().indexOf(searchText.toLocaleLowerCase()) !== -1;
@@ -150,6 +150,7 @@ class Restaurants extends Component {
         const { restaurantList } = this.props;
         const { categories, } = this.state;
         if (restaurantList) {
+            // eslint-disable-next-line
             return Object.keys(restaurantList).map((val) => {
                 return restaurantList[val].typeOfFood.map((e1) => {
                     eslint-disable-next-line
@@ -191,7 +192,7 @@ class Restaurants extends Component {
     }
 
     _renderSearchRestaurants() {
-       eslint-disable-next-line
+       // eslint-disable-next-line
         const { searchText, searchRestaurants } = this.state;
         if (searchRestaurants) {
             return Object.keys(searchRestaurants).map((val) => {
