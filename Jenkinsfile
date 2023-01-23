@@ -20,14 +20,14 @@ pipeline {
         
      }
  }
-//     stage('Testing'){
-//       steps{
-//         script{
-//               sh "npm install"
-//               sh "npm run test"
-//         }
-//       }
-//     }
+     stage('Build code'){
+      steps{
+        script{
+               sh "npm install"
+               sh "npm run start"
+         }
+       }
+     }
       
  
 
